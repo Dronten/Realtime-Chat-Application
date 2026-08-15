@@ -15,11 +15,8 @@ const app = express();
 const server = http.createServer(app);
 const PORT = process.env.PORT || 8080;
 
-<<<<<<< HEAD
 const _dirname = path.resolve();
 
-=======
->>>>>>> 1841cea85059c66d37800ad30ce467e510cf9d06
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
@@ -44,9 +41,5 @@ app.get("/*splat", (_, res) => {
 })
 
 server.listen(PORT, () => {
-<<<<<<< HEAD
     console.log(`Server running on port ${PORT}`);
-=======
-  console.log(`Server running on port ${PORT}`);
->>>>>>> 1841cea85059c66d37800ad30ce467e510cf9d06
 });

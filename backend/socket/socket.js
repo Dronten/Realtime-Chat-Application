@@ -16,10 +16,7 @@ export const setupSocket = (server) => {
     });
 
     io.on("connection", (socket) => {
-<<<<<<< HEAD
-=======
         console.log("user connected:", socket.id);
->>>>>>> 1841cea85059c66d37800ad30ce467e510cf9d06
 
         const userId = socket.handshake.query.userId;
         if (userId) {
@@ -29,10 +26,7 @@ export const setupSocket = (server) => {
         io.emit("getOnlineUsers", Object.keys(userSocketMap));
 
         socket.on("disconnect", () => {
-<<<<<<< HEAD
-=======
             console.log("user disconnected:", socket.id);
->>>>>>> 1841cea85059c66d37800ad30ce467e510cf9d06
             delete userSocketMap[userId];
             io.emit("getOnlineUsers", Object.keys(userSocketMap));
         });
