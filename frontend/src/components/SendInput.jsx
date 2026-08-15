@@ -20,7 +20,6 @@ const SendInput = () => {
                 },
                 withCredentials: true
             });
-            console.log(res);
             // dispatch(setMessages([...(messages || []), res?.data?.newMessage]));
             dispatch(setMessages([...messages, res?.data?.newMessage]))
             socket.emit("sendMessage", res?.data?.newMessage);
