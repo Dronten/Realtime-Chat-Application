@@ -38,7 +38,7 @@ setupSocket(server); // initializes Socket.io using the same server
 app.use(express.static(path.join(_dirname, "/frontend/dist")))
 app.get("/*splat", (_, res) => {
     res.sendFile(path.resolve(_dirname, "frontend", "dist", "index.html"));
-})
+});
 
 server.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
