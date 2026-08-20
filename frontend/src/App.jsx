@@ -31,7 +31,7 @@ function App() {
 
     useEffect(() => {
         if (authUser) {
-            const socketio = io('http://localhost:8080', {
+            const socketio = io('https://realtime-chat-application-8e59.onrender.com', {
                 withCredentials: true,
                 transports: ['websocket', 'polling'],
                 query: {
